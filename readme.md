@@ -15,18 +15,17 @@
 ## 2. Running the server
 
 ### 1. installing the dependecies
-    ```bash
-        pip install -r requirements.txt
-    ```
+```bash
+    pip install -r requirements.txt
+```
 ### 2. appling migrations
-    ```bash
-        python manage.py migrate
-    ```
+```bash
+    python manage.py migrate
+```
 ### 3. run the development server
-    ```base
-        python manage.py runserver
-    ```
-
+```bash
+   python manage.py runserver
+```
 ## 3. Api Endpoints
 
 ### 1. CRUD operations
@@ -47,5 +46,4 @@ PATCH http://127.0.0.1:8000/api/stocks/<id>/
         "ticker_symbol": "AAPL",
         "price": 175.00
     }
-```
 
