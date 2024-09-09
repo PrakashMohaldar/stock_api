@@ -15,7 +15,9 @@ To configure your PostgreSQL database, you need to set up the necessary environm
    PGDATABASE=<db>
    PGUSER=<user>
    PGPASSWORD=<pgpuser>
-   PGPORT=<portnumber>```
+   PGPORT=<portnumber>
 
-4. Change <Link> <db> <user> <pgpuser> <portnumber>
+4. Change 
+```plaintext
+<Link> <db> <user> <pgpuser> <portnumber>
 
