@@ -1,5 +1,7 @@
 ## 1. Make a `.env` file and add following details
 ### 1. Database used Neon postgres
+DB link: "https://console.neon.tech/app/projects"
+
    ```plaintext
    PGHOST=<Link>
    PGDATABASE=<db>
