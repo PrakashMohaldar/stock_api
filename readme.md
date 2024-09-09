@@ -1,23 +1,51 @@
-## 1. Adding Database URL and Password to `.env`
-
-To configure your PostgreSQL database, you need to set up the necessary environment variables in a `.env` file. Follow these steps to add the database connection details:
-
-### 1.1. Create a `.env` File
-
-1. In the root directory of your Django project (the same directory where `manage.py` is located), create a file named `.env` if it does not already exist.
-
-2. Open the `.env` file in a text editor and add the following lines. Replace the placeholders with your actual database credentials:
-
-3. Database used Neon postgres
-
+## 1. Make a `.env` file and add following details
+### 1. Database used Neon postgres
    ```plaintext
    PGHOST=<Link>
    PGDATABASE=<db>
    PGUSER=<user>
    PGPASSWORD=<pgpuser>
    PGPORT=<portnumber>
+   ```
+### 2. Change 
+ ```plaintext
+  <Link> <db> <user> <pgpuser> <portnumber>
+  ```
 
-4. Change 
+## 2. Running the server
+
+### 1. installing the dependecies
+    ```bash
+        pip install -r requirements.txt
+    ```
+### 2. appling migrations
+    ```bash
+        python manage.py migrate
+    ```
+### 3. run the development server
+    ```base
+        python manage.py runserver
+    ```
+
+## 3. Api Endpoints
+
+### 1. CRUD operations
 ```plaintext
-<Link> <db> <user> <pgpuser> <portnumber>
+GET http://127.0.0.1:8000/api/stocks/
+POST http://127.0.0.1:8000/api/stocks/
+
+GET http://127.0.0.1:8000/api/stocks/<id>/
+PUT http://127.0.0.1:8000/api/stocks/<id>/
+POST http://127.0.0.1:8000/api/stocks/<id>/
+PATCH http://127.0.0.1:8000/api/stocks/<id>/
+```
+
+### 2. post, put, patch request input json format
+```json
+    {
+        "name": "Apple Inc.",
+        "ticker_symbol": "AAPL",
+        "price": 175.00
+    }
+```
 
